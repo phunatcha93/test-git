@@ -2,5 +2,6 @@
     <input #sometging pInputText type="text" name="" id="">
     <!-- <input pInputText type="text" name="" id=""> -->
 </div>
-<span >{{value}}</span>
-<p-button  (onClick)="calPrice(sometging.value)" label="Summit"></p-button>
+<!-- <span >{{value}}</span> -->
+<small *ngIf="sometging"></small>
+<p-button  [disabled]="sometging.value" (onClick)="calPrice(sometging.value)" label="Summit"></p-button>
